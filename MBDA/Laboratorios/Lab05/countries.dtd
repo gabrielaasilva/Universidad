@@ -1,0 +1,19 @@
+<!DOCTYPE Countries
+[
+	<!ELEMENT countries (country+)>
+	<!ELEMENT country (city*,language*)>
+	<!ELEMENT city(name,population)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT population (#PCDATA)>
+	<!ELEMENT area (#PCDATA)>
+	<!ELEMENT language (#PCDATA)>
+	<!ATTLIST country name CDATA #REQUIRED
+					  population CDATA #REQUIRED
+					  area CDATA #REQUIRED>
+]>
+
+* -> 0 a muchos
++ -> 1 a muchos
+? -> 0 a 1
+
+<population>ALGO</population>

@@ -1,0 +1,5 @@
+/*Dar permisos al beneficiario*/
+
+CREATE ROLE BENEFICIARIO;
+GRANT EXECUTE ON PC_Opinion TO BENEFICIARIO;
+

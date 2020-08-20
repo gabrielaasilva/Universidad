@@ -1,0 +1,21 @@
+CREATE OR REPLACE PACKAGE PC_Venta IS
+    PROCEDURE AD_VENTA (newRevisionNumber IN INT,newDueDate IN DATE,newShipDate IN DATE,
+                        newStatus IN INT,newOnlineOrderFlag IN VARCHAR2,newSalessOrderNumber IN VARCHAR2,
+                        newPurchaseOrder IN VARCHAR2,newAccountNumber IN VARCHAR2,newCustomerID IN INT,
+                        newShipMethod IN VARCHAR2,newCreditCardApprovalCode IN VARCHAR2,newFreight IN NUMBER,
+                        newCommnt IN VARCHAR2);
+    PROCEDURE EL_VENTA (newSalesOrderHeaderID IN INT);
+    FUNCTION CO_VENTA RETURN XMLTYPE;
+    FUNCTION CO_PRODUCTO RETURN SYS_REFCURSOR;
+    FUNCTION CO_MODELO RETURN SYS_REFCURSOR;
+    FUNCTION CO_EVALUACION RETURN SYS_REFCURSOR;
+END PC_Venta;
+
+CREATE OR REPLACE PACKAGE PC_Modelo IS
+    PROCEDURE AD_MODELO (newName IN VARCHAR2,newCatalogDescription IN VARCHAR2);
+    PROCEDURE EL_MODELO (newProductModelID IN INT);
+    PROCEDURE MO_MODELO (newProductModelID IN INT, newName IN VARCHAR2, newCatalogDescription IN VARCHAR2);
+    FUNCTION CO_MODELO RETURN XMLTYPE;
+    FUNCTION CO_DESCRIPCION RETURN SYS_REFCURSOR;
+    FUNCTION CO_EVALUACION RETURN SYS_REFCURSOR;
+END PC_Modelo;
