@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Libertarian
+comment0.text=\r\n\ Ficha\ Libertarian.\r\n\ No\ captura\ las\ piezas\ que\ salta.\r\n
+comment1.params=x\ y\ color\ width\ jugador
+comment1.target=Libertarian(int,\ int,\ java.lang.String,\ int,\ boolean)
+numComments=2

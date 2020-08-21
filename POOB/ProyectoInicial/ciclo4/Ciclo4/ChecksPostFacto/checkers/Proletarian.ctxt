@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Proletarian
+comment0.text=\r\n\ Ficha\ proletarian\r\n\ muere\ al\ tener\ que\ convertirse\ en\ rey\r\n
+comment1.params=x\ y\ color\ width\ jugador
+comment1.target=Proletarian(int,\ int,\ java.lang.String,\ int,\ boolean)
+comment2.params=
+comment2.target=void\ deadKing()
+numComments=3

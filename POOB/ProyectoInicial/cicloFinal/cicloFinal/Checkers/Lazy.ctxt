@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Lazy
+comment0.text=\r\n\ Ficha\ lazy\r\n\ en\ un\ movimiento,\ solo\ salta\ una\ vez.\r\n
+comment1.params=t\ x\ y\ color\ width\ jugador
+comment1.target=Lazy(Tablero,\ int,\ int,\ java.lang.String,\ int,\ boolean)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ lazy\r\n
+comment2.params=t\ top\ right
+comment2.target=void\ actionOnJump(Tablero,\ boolean,\ boolean)
+numComments=3

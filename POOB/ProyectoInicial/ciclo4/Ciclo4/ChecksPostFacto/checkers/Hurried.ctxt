@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Hurried
+comment0.text=\r\n\ Ficha\ Hurried.\r\n\ repite\ dos\ veces\ el\ movimiento,\ si\ pueda\ \r\n
+comment1.params=x\ y\ color\ width\ jugador
+comment1.target=Hurried(int,\ int,\ java.lang.String,\ int,\ boolean)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Hurried\r\n
+numComments=2

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Hurried
+comment0.text=\r\n\ Ficha\ Hurried.\r\n\ repite\ dos\ veces\ el\ movimiento,\ si\ pueda\ \r\n
+comment1.params=t\ x\ y\ color\ width\ jugador
+comment1.target=Hurried(Tablero,\ int,\ int,\ java.lang.String,\ int,\ boolean)
+comment2.params=top\ right
+comment2.target=void\ move(boolean,\ boolean)
+comment3.params=t\ top\ right
+comment3.target=void\ actionOnJump(Tablero,\ boolean,\ boolean)
+numComments=4

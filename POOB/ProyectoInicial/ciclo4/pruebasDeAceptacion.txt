@@ -1,0 +1,69 @@
+Pruebas de aceptación.
+
+Proletarian.
+
+Adición.
+true 
+{{6,1}}
+false
+{1,2}}
+
+Lazy.
+Adición.
+true
+{{0,1}}
+
+false
+{{1,2},{3,4}}
+
+jump
+false, true.
+
+Powerful.
+Adición.
+true
+{{0,1}}
+
+false
+{{1,2},{3,4}}
+
+jump
+false, true.
+
+Libertarian.
+Adición.
+true
+{{0,1}}
+
+false
+{{1,2},{3,4}}
+
+jump
+false, true.
+
+God.
+Adición.
+true
+{{0,1}}
+
+false
+{{1,2},{0,3},{7,0}}
+
+jump
+false, true.
+
+Hurried.
+Adición.
+true
+{{0,1}}
+
+shift
+false,true.
+
+Adición.
+false
+{{1,2},{3,4}}
+
+jump
+false, true.
+

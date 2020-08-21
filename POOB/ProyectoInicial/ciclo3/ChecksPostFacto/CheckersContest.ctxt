@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=CheckersContest
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CheckersContest\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=CheckersContest()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ CheckersContest\r\n
+comment2.params=player\ moves
+comment2.target=java.lang.String[]\ solve(char,\ java.lang.String[])
+comment3.params=player\ moves\ slow
+comment3.target=void\ simulate(char,\ java.lang.String[],\ boolean)
+comment4.params=y
+comment4.target=int\ sampleMethod(int)
+comment4.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment5.params=moves
+comment5.target=void\ confiBlack(java.lang.String[])
+comment6.params=moves
+comment6.target=void\ confiWhite(java.lang.String[])
+numComments=7

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=CheckersContest
+comment1.params=
+comment1.target=CheckersContest()
+comment2.params=player\ moves
+comment2.target=java.lang.String[]\ solve(char,\ java.lang.String[])
+comment3.params=player\ moves\ slow
+comment3.target=void\ simulate(char,\ java.lang.String[],\ boolean)
+comment4.params=moves
+comment4.target=void\ confiBlack(java.lang.String[])
+comment5.params=moves
+comment5.target=void\ confiWhite(java.lang.String[])
+comment6.params=numeros
+comment6.target=void\ diagonalBlanca(java.lang.String[])
+comment7.params=numeros
+comment7.target=void\ diagonalNegra(java.lang.String[])
+comment8.params=x\ y
+comment8.target=int\ numero(int,\ int)
+numComments=9

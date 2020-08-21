@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=God
+comment0.text=\r\n\ Ficha\ creada\ por\ nosotros\ (God)\r\n\ Si\ una\ ficha\ God\ captura\ una\ del\ equipo\ contrario\ tendr\u00E1\ el\ pode\ de\r\n\ eliminar\ otra\ ficha\ del\ otro\ equipo.\r\n
+comment1.params=x\ y\ color\ width\ jugador
+comment1.target=God(int,\ int,\ java.lang.String,\ int,\ boolean)
+comment2.params=
+comment2.target=boolean\ getJugador()
+numComments=3

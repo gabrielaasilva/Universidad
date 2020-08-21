@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Powerful
+comment0.text=\r\n\ Ficha\ Powerful\ \r\n\ No\ se\ deja\ capturar\ \ \r\n
+comment1.params=x\ y\ color\ width\ jugador
+comment1.target=Powerful(int,\ int,\ java.lang.String,\ int,\ boolean)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Powerful\r\n
+numComments=2

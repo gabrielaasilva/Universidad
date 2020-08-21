@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=CheckersTestC2
+comment1.params=
+comment1.target=void\ segunPSdeberiaA\u00F1adirFicha()
+comment2.params=
+comment2.target=void\ segunPSdeberiaRemoverFicha()
+comment3.params=
+comment3.target=void\ segunPSdeberiaSeleccionar()
+comment4.params=
+comment4.target=void\ segunPSdeberiaMoverse()
+comment5.params=
+comment5.target=void\ segunPSdeberiaEscribir()
+comment6.params=
+comment6.target=void\ segunPSdeberiaRecordar()
+comment7.params=
+comment7.target=void\ segundPSdeberiaFallar()
+numComments=8
