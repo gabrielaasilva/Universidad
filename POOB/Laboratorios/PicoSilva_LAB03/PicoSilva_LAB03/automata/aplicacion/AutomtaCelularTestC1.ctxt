@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=AutomtaCelularTestC1
+comment0.text=\r\n\ The\ test\ class\ AutomtaCelularTestC1.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=AutomtaCelularTestC1()
+comment1.text=\r\n\ Default\ constructor\ for\ test\ class\ AutomtaCelularTestC1\r\n
+comment2.params=
+comment2.target=void\ deberiaHacerTicTac()
+numComments=3

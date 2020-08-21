@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Conway
+comment0.text=\r\n\ En\ el\ juego\ de\ la\ vida\ el\ estado\ del\ AutomataCelular\ evoluciona\ a\ lo\ largo\ de\ unidades\ de\ tiempo\ y\ los\ cambios\ dependen\ del\ n\u00FAmero\ de\ c\u00E9lulas\ \r\nvecinas\ vivas\:\r\n\uF0B7*\ Una\ c\u00E9lula\ muerta\ con\ exactamente\ 3\ c\u00E9lulas\ vecinas\ vivas\ "revive"\ (al\ tiempo\ siguiente\ estar\u00E1\ viva).\r\n\uF0B7*\ Una\ c\u00E9lula\ viva\ con\ 2\ \u00F3\ 3\ c\u00E9lulas\ vecinas\ vivas\ sigue\ viva.\r\n\uF0B7*\ Si\ la\ c\u00E9lula\ tiene\ menos\ de\ dos\ o\ m\u00E1s\ de\ tres\ vecinas\ vivas\ muere\ o\ permanece\ muerta\ por\ "soledad"\ o\ superpoblaci\u00F3n".\r\n\uF0B7*\ Si\ en\ el\ vecindario,\ hay\ una\ celda\ vacia\ rodeada\ por\ 3\ c\u00E9lulas\ vivas\ \u201Cnace\u201D\ una\ nueva\ c\u00E9dula\ (al\ tiempo\ siguiente\ estar\u00E1\ viva).\r\n
+comment1.params=ac\ fila\ columna
+comment1.target=Conway(AutomataCelular,\ int,\ int)
+comment2.params=
+comment2.target=void\ decida()
+comment3.params=
+comment3.target=void\ alrededor()
+comment3.text=\r\n\ Hace\ un\ chequeo\ para\ saber\ si\ una\ celula\ tiene\ celulas\ pr\u00F3ximas.\r\n
+numComments=4

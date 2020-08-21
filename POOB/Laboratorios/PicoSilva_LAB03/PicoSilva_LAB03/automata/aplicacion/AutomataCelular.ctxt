@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=AutomataCelular
+comment1.params=
+comment1.target=AutomataCelular()
+comment2.params=
+comment2.target=int\ getLongitud()
+comment2.text=Retorna\ la\ longitud\r\n\ @return\ LONGITUD\r\n
+comment3.params=f\ c
+comment3.target=Elemento\ getElemento(int,\ int)
+comment3.text=Retorna\ un\ elemento\ en\ la\ posicion\ dada.\r\n\ @param\ int\ f,\ int\ c\r\n\ @return\ automata[f][c]\r\n
+comment4.params=f\ c\ nueva
+comment4.target=void\ setElemento(int,\ int,\ Elemento)
+comment4.text=Cambia\ un\ elemento\ en\ la\ posicion\ dada.\r\n\ @param\ int\ f,\ int\ c,\ Elemento\ nueva\r\n
+comment5.params=
+comment5.target=void\ algunosElementos()
+comment5.text=\r\n\ Permite\ agregar\ elementos\ al\ automata\r\n
+comment6.params=
+comment6.target=void\ ticTac()
+comment6.text=\r\n\ Permite\ realizar\ el\ TIC-TAC\ de\ celulas\r\n
+numComments=7

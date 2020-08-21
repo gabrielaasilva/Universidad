@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Izquierdosa
+comment0.text=\r\n\ Estas\ c\u00E9lulas\ son\ de\ color\ rojo\ y\ deciden\ morir\ si\ hay\ alg\u00FAn\ elemento\ vivo\ a\ su\ derecha\ (oeste).\r\n
+comment1.params=ac\ fila\ columna
+comment1.target=Izquierdosa(AutomataCelular,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Izquierdosa\r\n
+comment2.params=
+comment2.target=void\ decida()
+numComments=3

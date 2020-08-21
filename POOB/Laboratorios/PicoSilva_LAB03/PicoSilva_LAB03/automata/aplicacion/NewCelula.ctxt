@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=NewCelula
+comment0.text=\r\n\ Nuestro\ nuevo\ tipo\ de\ c\u00E9lula\ ser\u00E1\ de\ color\ verde,\ la\ funci\u00F3n\ que\ realizar\u00E1\ ser\u00E1\ que\ muera\ si\ tiene\ vecinos\ a\ su\ lado\ izquierdo.\ (Este)\u0000\r\n
+comment1.params=ac\ fila\ columna
+comment1.target=NewCelula(AutomataCelular,\ int,\ int)
+comment2.params=
+comment2.target=void\ decida()
+numComments=3

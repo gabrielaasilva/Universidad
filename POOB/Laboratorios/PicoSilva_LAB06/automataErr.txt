@@ -1,0 +1,8 @@
+Conway 0 0 
+Conway 0 1
+Conway 1 0
+Conway 1 1
+Conway 5 1
+Conway 5 2
+Acano 3 1
+
