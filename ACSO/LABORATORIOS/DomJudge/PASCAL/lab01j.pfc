@@ -1,0 +1,28 @@
+program lab01j;
+var
+num1,num2: real;
+numOp,i: Integer;
+oper: char;
+
+begin
+  readln(numOp);
+  
+  for i:=1 to numOp do
+	begin
+	readln(oper);
+	readln(num1);
+	readln(num2);
+
+	if oper = '+' then
+		writeln(num1+num2)
+	else if oper = '-' then
+		writeln(num1-num2)
+	else if oper = '*' then
+		writeln(num1*num2)
+	else
+		if num2 = 0 then
+			writeln('Indefinido')
+		else
+			writeln(num1 / num2);
+  end;
+end.

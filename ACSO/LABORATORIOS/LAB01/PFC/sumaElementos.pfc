@@ -1,0 +1,27 @@
+program sumaElementos;
+
+var
+vector: array[1..100] of integer;
+i,longitud,suma: Integer;
+
+begin
+  suma:= 0;
+  
+  writeln('Ingrese la longitud del vector: ');
+  readln(longitud);
+	
+  for i:=1 to longitud do
+  begin
+	writeln('Número',i,': ');
+	readln(vector[i]);
+  end;
+  
+  for i:=1 to longitud do
+  begin
+	suma:= suma+vector[i];
+  end;
+  
+  writeln('La suma de los número dentro del vector es: ',suma);
+ end.
+  
+  

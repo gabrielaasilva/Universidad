@@ -1,0 +1,33 @@
+program lab01h;
+
+var
+vector: array[1..2000] of Integer;
+casos,longitud,i,j,k,suma: Integer;
+
+begin
+	readln(casos);
+	
+	for i:=1 to casos do
+	begin
+		suma:=0;
+		readln(longitud);
+		
+		for j:=1 to longitud do
+		begin
+			readln(vector[j]);
+		end;
+		
+		for k:=1 to longitud do
+		begin
+			suma:= suma+vector[k];
+		end;
+		
+		writeln (suma);
+	end;
+end.
+		
+		
+		
+
+
+

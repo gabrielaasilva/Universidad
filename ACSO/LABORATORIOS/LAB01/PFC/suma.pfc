@@ -1,0 +1,13 @@
+program suma;
+var num1, num2, suma : Integer;
+
+begin
+	write('Ingrese primer numero: ');
+	readLn(num1);
+	write('Ingrese segundo numero: ');
+	readLn(num2);
+	
+	suma := num1+num2;
+	writeln('Resultado: ',suma);
+end. 
+	

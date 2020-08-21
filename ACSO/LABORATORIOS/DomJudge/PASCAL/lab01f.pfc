@@ -1,0 +1,37 @@
+program lab01f;
+
+var
+vector: array[1..2000] of real;
+casos,longitud,i,j,k: Integer;
+menor : real;
+
+begin
+	readln(casos);
+	
+	for i:=1 to casos do
+	begin
+		readln(longitud);
+		
+		for j:=1 to longitud do
+		begin
+			readln(vector[j]);
+		end;
+		
+		menor := vector[1];
+		
+		for k:=2 to longitud do
+		begin
+			if vector[k] < menor then
+			menor:= vector[k];
+		end;
+		
+		writeln (menor);
+	end;
+		
+end.
+		
+		
+		
+		
+		
+		

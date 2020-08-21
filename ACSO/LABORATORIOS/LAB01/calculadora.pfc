@@ -1,0 +1,87 @@
+program calculadora;
+var
+numero1,numero2:Integer;
+op:char;
+
+
+procedure menu();
+begin 
+  writeln('MENU');
+  writeln(' Suma(+) ');
+  writeln(' Resta(-) ');
+  writeln(' Multiplicación(*) ');
+  writeln(' División(/) ');
+end;
+
+function suma(numero1,numero2: Integer): Integer;
+var
+resultados: Integer;
+
+begin
+  resultados:= numero1 + numero2;
+  suma:= resultados;
+end;
+
+function resta(numero1,numero2: Integer): Integer;
+var
+resultador: Integer;
+
+begin
+  resultador:= numero1 - numero2;
+  resta:= resultador;
+end;
+
+function multiplicacion(numero1,numero2: Integer): Integer;
+var
+resultadom: Integer;
+
+begin
+  resultadom:= numero1 * numero2;
+  multiplicacion:= resultadom;
+end;
+
+function division(numero1,numero2: Integer): Integer;
+var
+resultadod: Integer;
+
+begin
+  resultadod:= numero1 div numero2;
+  division:= resultadod;
+end;
+
+begin	
+  menu();
+  writeln('Ingrese el caracter asociado a la opción que desea realizar: ');
+  readln(op);
+  writeln('Ingrese el primer número: ');
+  readln(numero1);
+  writeln('Ingrese el segundo número: ');
+  readln(numero2);
+  
+  if oper = '+' then
+    writeln('El total de la suma es: ', suma(numero1,numero2))
+  else if oper = '-' then
+    writeln('El total de la resta es: ', resta(numero1,numero2))
+  else if oper = '*' then
+    writeln('El total de la multiplicacion es: ', multiplicacion(numero1,numero2))
+  else 
+	writeln('El total de la división es: ', division(numero1,numero2));
+
+end. 
+  
+  
+  
+  
+	
+
+
+
+
+
+
+
+
+
+
+
+  

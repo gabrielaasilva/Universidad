@@ -1,0 +1,28 @@
+program menorVector;
+var
+i,j,longitud,menor: real;
+vector: array[1..100] of real;
+
+begin
+
+  writeln('Ingrese la longitud del vector: ');
+  readln(longitud);
+	
+  for i:=1 to longitud do
+  begin
+	writeln('Número',i,': ');
+	readln(vector[i]);
+  end;
+	
+  menor:= vector[i];
+	
+  for j:=1 to longitud do	
+  begin
+	if vector[j] < menor the
+		menor:= vector[j];
+  end;
+
+  writln('El numero menor en el vector es: ',menor);
+end. 
+
+

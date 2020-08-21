@@ -1,0 +1,15 @@
+program lab01b;
+var num1, num2,num3, suma,i : Integer;
+
+begin
+	readLn(num3);
+	
+	for i:=1 to num3 do
+	begin
+		readLn(num1);
+		readLn(num2);
+		suma := num1+num2;
+		writeln(suma);
+	end;
+end. 
+	

@@ -1,0 +1,23 @@
+program lab01d;
+var 
+num1,num2,mayor: real;
+num3,i: Integer;
+
+begin
+
+	readln(num3);
+	
+	for i:=1 to num3 do
+	begin 
+		readln(num1);
+		readln(num2);
+
+		if num1 > num2 then
+			mayor := num1
+		else
+			mayor:= num2;
+			
+		writeln(mayor);
+	end;
+
+end.
