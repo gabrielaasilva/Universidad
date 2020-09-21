@@ -34,6 +34,7 @@ int main(){
 		int *vectorCompleto = lectura(vector,longitud);
 	
 		printf("%d\n", suma(vectorCompleto, longitud));
+		
 	}
 	
 	return 0;

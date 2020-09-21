@@ -1,0 +1,67 @@
+program lab02c;
+
+const 
+	n = 2000;
+	m = 200;
+type
+	Tarray = array[1..n] of real;
+var
+suma: real;
+
+process type product (var vector1:Tarray; var vector2:Tarray; inferior,superior:integer;var suma:real);
+	var i,j: integer;
+	begin
+		for i:=inferior to superior do
+		begin
+			suma := suma+( vector1[i]*vector2[i]);	
+		end;
+	end; 
+
+type
+	TipoProceso = array[1..m] of product;
+	sumas = array[1..m] of real;	
+		
+var
+	procesos:TipoProcesos;
+	p,longitud,k,l,num: integer;
+	productopunto: real;
+	answer:sumas;
+	vector1: Tarray;
+	vector2: Tarray;
+
+begin
+	readln(longitud);
+	readln(p);
+	
+	num := longitud div p;
+	
+
+	for k:=1 to longitud do
+	begin
+		readln(vector1[k]);
+	end;
+	
+	for k:=1 to longitud do
+	begin
+		readln(vector2[k]);
+	end;
+	
+	cobegin
+		for l:=1 to p do
+		begin
+			procesos[l](vector1,vector2,(l-1)*num+1,l*num,answer[l]);
+		end;
+	coend;
+	
+	productopunto := 0;
+		
+		
+	for l:=1 to p do
+	begin
+		productopunto := productopunto +answer[l];
+	end;
+		
+	writeln(productopunto);
+	
+		
+end.

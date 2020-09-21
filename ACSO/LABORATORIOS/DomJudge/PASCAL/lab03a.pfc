@@ -1,0 +1,104 @@
+program lab03a; 
+
+const 
+
+M=200;
+N=2000;
+
+type
+
+Tcanal = channel of integer;
+Tcanales = array [1..M] of Tcanal;
+Tvector = array [1 .. N] of integer;
+
+
+process type tpv(var salida:Tcanal; var canales1: Tcanales; p:integer; longitud:integer; vector:Tvector );
+
+  var
+      min,i: integer;
+begin
+  for i:= 1 to longitud do 
+  begin
+	readln(vector[i]);
+  end;
+  for i:= 1 to longitud do 
+  begin
+	canales1[(i mod p)+1] ! vector[i];
+  end;
+
+   salida ? min;
+   writeln(min)
+end;
+
+process type Tpmin(var entrada: Tcanal;var salida: Tcanal; p,longitud:integer);
+        var
+        j, minimo, siguiente, num :integer;
+
+
+begin
+
+        num := longitud div p;
+
+        entrada ? minimo;
+
+    for j:= 2 to num do
+        begin
+        entrada ? siguiente;
+        if siguiente < minimo then
+                minimo:= siguiente;
+        end;
+
+        salida ! minimo;
+end;
+
+
+process type Tpvmin(var canales2: Tcanales;var salida:Tcanal; p:integer);
+        var
+        k, minimo, siguiente:integer;
+
+        begin
+
+        canales2[1] ? minimo;
+
+        for k:=2 to p do
+        begin
+        canales2[k] ? siguiente;
+        if siguiente < minimo then
+                minimo:= siguiente;
+        end;
+
+        salida ! minimo;
+end;
+
+
+type
+  Tpmini = array [1 .. M] of Tpmin;
+  lectura = tpv;
+  minGlobal = Tpvmin;
+
+
+var
+  pv: lectura;
+  pmin: Tpmini;
+  pvmin: minGlobal;
+  canales1: Tcanales;
+  canales2: Tcanales;
+  entrada: Tcanal;
+  salida: Tcanal;
+  canal: Tcanal;
+  p,longitud,i: integer;
+  vector: Tvector;
+
+begin
+   readln(longitud);
+   readln(p);
+
+   cobegin
+     pv(canal, canales1, p,longitud,vector);
+     for i:= 1 to p do
+     begin
+       pmin[i](canales1[i], canales2[i],p,longitud);
+     end;
+     pvmin(canales2, canal, p);
+   coend;
+end.

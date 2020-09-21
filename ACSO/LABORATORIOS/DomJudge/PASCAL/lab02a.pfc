@@ -1,0 +1,63 @@
+program lab02a;
+
+const 
+	n = 2000;
+	m = 200;
+type
+	Tarray = array[1..n] of integer;
+	
+var
+menor: Integer;
+
+process type minimo(var vector:Tarray; inferior,superior:integer;var menor:integer);
+	var k : integer;
+	begin 
+		menor := vector[inferior];
+		for k:=inferior+1 to superior do
+		begin
+			if vector[k] < menor then
+			menor:= vector[k];
+		end;
+	end;
+	
+type
+	TipoProceso = array[1..m] of minimo;
+	Minimos = array[1..m] of integer;
+	
+var
+	procesos:TipoProcesos;
+	p,longitud,j,num: integer;
+	ans:Minimos;
+	vector: Tarray;
+		
+begin
+	readln(longitud);
+	readln(p);
+	 num := longitud div p;
+	
+
+	for j:=1 to longitud do
+	begin
+		readln(vector[j]);
+	end;
+	
+	cobegin
+		for j:=1 to p do
+		begin
+			procesos[j](vector,(j-1)*num+1,j*num,ans[j]);
+		end;
+	coend;
+		
+		
+	menor := ans[1];
+		
+	for j:=1 to p do
+	begin
+		if ans[j] < menor then
+		menor:= ans[j];
+	end;
+		
+	writeln(menor);
+	
+		
+end.
