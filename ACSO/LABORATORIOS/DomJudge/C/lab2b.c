@@ -21,7 +21,7 @@ int main(void){
 
     scanf("%d",&casos);
 
-    for (i=0;i<casos;i++){
+    for (i=0;i<casos;i++){	
         scanf("%d",&longitud);
         float vector1[longitud];
         float vector2[longitud];
