@@ -1,0 +1,20 @@
+Host
+ec2-107-22-241-205.compute-1.amazonaws.com
+
+Database
+daoa63a83kj41b
+
+User
+qlvvuutufrvcpi
+
+Port
+5432
+
+Password
+e55af0ae54bbcd717582e0d1a285ea36b09d23c48bc90f67f06ddb3f3b3ecd8f
+
+URI
+postgres://qlvvuutufrvcpi:e55af0ae54bbcd717582e0d1a285ea36b09d23c48bc90f67f06ddb3f3b3ecd8f@ec2-107-22-241-205.compute-1.amazonaws.com:5432/daoa63a83kj41b
+
+Heroku CLI
+heroku pg:psql postgresql-tetrahedral-83851 --app lasrastasdelcalvo

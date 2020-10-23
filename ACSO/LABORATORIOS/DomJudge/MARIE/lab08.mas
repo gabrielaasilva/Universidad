@@ -1,0 +1,73 @@
+		Input
+		Store	 	x
+		Strore		acum
+		Input
+		Store		a
+		Input
+		Store	 	b
+		Input
+		Store		c
+
+op1,		Skipcond	800
+		Jump		endop1
+
+		Load 		cuadrado
+		Add		x
+		Store		cuadrado
+
+		Load 		acum
+		Subt		unidad	
+		Store		acum
+		Jump		op1
+
+endop1,		Load		cuadrado
+
+op2,		Skipcond	800
+		Jump 		endoop2
+
+		Load 		suma
+		add		a
+		Store		suma
+
+		Load		cuadrado
+		subt		unidad	
+		Store		cuadrado	
+		Jump		op2
+
+endop2,		Load		x
+
+op3,		Skipcond 	800
+		Jump		endop3
+
+		Load		total
+		add		b
+		Store		total
+
+		Load		x
+		Subt		unidad	
+		Store		x
+
+		Jump		op3
+
+endop3,		Load		total
+		Add		c
+		Store		total
+
+		Output
+		Halt
+
+
+x,		DEC		0
+acum,		DEC		0	
+a,		DEC		0
+b,		DEC		0
+c,		DEC		0
+unidad,		DEC		1
+
+
+
+
+	
+
+	 
+
