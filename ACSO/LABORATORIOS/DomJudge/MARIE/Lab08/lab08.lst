@@ -1,0 +1,106 @@
+     Assembly listing for: lab08.mas
+                Assembled: Sun Oct 25 16:33:23 COT 2020
+
+         |                              /leer tres coeficientes a, b, c, leer el valor de X y evaluar el polinomio a * X ^ 2 + b * X + c, mostrar el resultado en pantalla. 
+         |                              		
+         |                              
+000 5000 |           INPUT               
+001 202B |           STORE x             
+002 202C |           STORE acum          
+003 5000 |           INPUT               
+004 202D |           STORE a             
+005 5000 |           INPUT               
+006 202E |           STORE b             
+007 5000 |           INPUT               
+008 202F |           STORE c             
+         |                              
+009 8800 |  op1      SKIPCOND 800        
+00A 9012 |           JUMP endop1         
+         |                              
+00B 1031 |           LOAD cuadrado       
+00C 302B |           ADD x               
+00D 2031 |           STORE cuadrado      
+         |                              
+00E 102C |           LOAD acum           
+00F 4030 |           SUBT unidad         
+010 202C |           STORE acum          
+011 9009 |           JUMP op1            
+         |                              
+012 1031 |  endop1   LOAD cuadrado       
+         |                              
+013 8800 |  op2      SKIPCOND 800        
+014 901C |           JUMP endop2         
+         |                              
+015 1032 |           LOAD suma           
+016 302D |           ADD a               
+017 2032 |           STORE suma          
+         |                              
+018 1031 |           LOAD cuadrado       
+019 4030 |           SUBT unidad         
+01A 2031 |           STORE cuadrado      
+01B 9013 |           JUMP op2            
+         |                              
+01C 102B |  endop2   LOAD x              
+         |                              
+01D 8800 |  op3      SKIPCOND 800        
+01E 9026 |           JUMP endop3         
+         |                              
+01F 1032 |           LOAD suma           
+020 302E |           ADD b               
+021 2032 |           STORE suma          
+         |                              
+022 102B |           LOAD x              
+023 4030 |           SUBT unidad         
+024 202B |           STORE x             
+         |                              
+025 901D |           JUMP op3            
+         |                              
+026 1032 |  endop3   LOAD suma           
+027 302F |           ADD c               
+028 2032 |           STORE suma          
+         |                              
+029 6000 |           OUTPUT              
+02A 7000 |           HALT                
+         |                              
+         |                              
+02B 0000 |  x        DEC 0               
+02C 0000 |  acum     DEC 0               
+02D 0000 |  a        DEC 0               
+02E 0000 |  b        DEC 0               
+02F 0000 |  c        DEC 0               
+030 0001 |  unidad   DEC 1               
+031 0000 |  cuadrado DEC 0               
+032 0000 |  suma     DEC 0               
+         |                              
+         |                              
+         |                              
+         |                              
+         |                              
+         |                              	
+         |                              
+         |                              	 
+         |                              
+
+Assembly successful.
+
+         SYMBOL TABLE
+         ----------------------------------------------------
+          Symbol   | Defined | References 
+         ----------+---------+-------------------------------
+          a        |   02D   | 004, 016
+          acum     |   02C   | 002, 00E, 010
+          b        |   02E   | 006, 020
+          c        |   02F   | 008, 027
+          cuadrado |   031   | 00B, 00D, 012, 018, 01A
+          endop1   |   012   | 00A
+          endop2   |   01C   | 014
+          endop3   |   026   | 01E
+          op1      |   009   | 011
+          op2      |   013   | 01B
+          op3      |   01D   | 025
+          suma     |   032   | 015, 017, 01F, 021, 026, 028
+          unidad   |   030   | 00F, 019, 023
+          x        |   02B   | 001, 00C, 01C, 022, 024
+         ----------------------------------------------------
+
+

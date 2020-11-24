@@ -1,0 +1,56 @@
+//Iniciando
+
+		Input 
+		Store		numerador
+		Input		
+		Store		denominador
+		
+		Load 		numerador
+		Subt		Unidad
+		
+		Skipcond	400
+		Jump		opfinal
+		Load		denominador
+		
+		Output
+		Halt
+
+opfinal, 	Load		numerador
+		Store		a
+		Load 		denominador
+		Store		b
+
+		Jns		res
+
+		Halt
+		
+
+//Número egipcio
+
+		Load		a
+		Skipcond	400
+		Jump 		op1
+		Halt
+
+op1,		Load		b
+		
+		Skipcond	400
+		Jump		op2
+
+		JumpI		res
+		Halt
+
+op2,		Load		b
+		Store		mod_a
+		Load		a
+		Store		mod_b
+
+		Jns		mod
+		Store		resMod1
+		
+
+
+
+
+		
+

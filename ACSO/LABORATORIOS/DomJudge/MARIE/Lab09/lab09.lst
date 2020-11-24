@@ -1,0 +1,69 @@
+     Assembly listing for: lab09.mas
+                Assembled: Sun Oct 25 15:53:31 COT 2020
+
+         |                          /Usando lenguaje ensamblador de MARIE, leer tres números a,b,c y  escribir el mayor valor.	
+000 5000 |         INPUT             
+001 2018 |         STORE a           
+002 5000 |         INPUT             
+003 2019 |         STORE b           
+004 5000 |         INPUT             
+005 201A |         STORE c           
+         |                          
+006 1018 |         LOAD a            
+007 4019 |         SUBT b            
+         |                          
+008 8000 |         SKIPCOND 000      
+009 900C |         JUMP op1          
+00A 1019 |         LOAD b            
+00B 900E |         JUMP op2          
+         |                          
+00C 1018 |  op1    LOAD a            
+00D 201B |         STORE maximo      
+         |                          
+00E 201B |  op2    STORE maximo      
+00F 401A |         SUBT c            
+         |                          
+010 8000 |         SKIPCOND 000      
+011 9014 |         JUMP op3          
+012 101A |         LOAD c            
+013 9016 |         JUMP final        
+         |                          
+014 101B |  op3    LOAD maximo       
+015 9016 |         JUMP final        
+         |                          
+016 6000 |  final  OUTPUT            
+017 7000 |         HALT              
+         |                          
+         |                          
+         |                          
+018 0000 |  a      DEC 0             
+019 0000 |  b      DEC 0             
+01A 0000 |  c      DEC 0             
+01B 0000 |  maximo DEC 0             
+         |                          
+         |                          
+         |                          
+         |                          
+         |                          		
+         |                          
+         |                          
+         |                          
+         |                          		
+
+Assembly successful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          a      |   018   | 001, 006, 00C
+          b      |   019   | 003, 007, 00A
+          c      |   01A   | 005, 00F, 012
+          final  |   016   | 013, 015
+          maximo |   01B   | 00D, 00E, 014
+          op1    |   00C   | 009
+          op2    |   00E   | 00B
+          op3    |   014   | 011
+         --------------------------------------------------
+
+

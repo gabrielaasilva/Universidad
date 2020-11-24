@@ -1,0 +1,18 @@
+ -------------------
+ Symbol   | Location
+ ---------+---------
+ a        |   02D
+ acum     |   02C
+ b        |   02E
+ c        |   02F
+ cuadrado |   031
+ endop1   |   012
+ endop2   |   01C
+ endop3   |   026
+ op1      |   009
+ op2      |   013
+ op3      |   01D
+ suma     |   032
+ unidad   |   030
+ x        |   02B
+

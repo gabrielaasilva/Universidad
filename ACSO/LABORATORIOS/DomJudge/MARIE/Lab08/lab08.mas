@@ -1,12 +1,15 @@
-		Input
-		Store	 	x
-		Strore		acum
+/leer tres coeficientes a, b, c, leer el valor de X y evaluar el polinomio a * X ^ 2 + b * X + c, mostrar el resultado en pantalla. 
+		
+
 		Input
 		Store		a
 		Input
 		Store	 	b
 		Input
 		Store		c
+		Input
+		Store	 	x
+		Store		acum
 
 op1,		Skipcond	800
 		Jump		endop1
@@ -23,7 +26,7 @@ op1,		Skipcond	800
 endop1,		Load		cuadrado
 
 op2,		Skipcond	800
-		Jump 		endoop2
+		Jump 		endop2
 
 		Load 		suma
 		add		a
@@ -39,9 +42,9 @@ endop2,		Load		x
 op3,		Skipcond 	800
 		Jump		endop3
 
-		Load		total
+		Load		suma
 		add		b
-		Store		total
+		Store		suma
 
 		Load		x
 		Subt		unidad	
@@ -49,9 +52,9 @@ op3,		Skipcond 	800
 
 		Jump		op3
 
-endop3,		Load		total
+endop3,		Load		suma
 		Add		c
-		Store		total
+		Store		suma
 
 		Output
 		Halt
@@ -63,6 +66,9 @@ a,		DEC		0
 b,		DEC		0
 c,		DEC		0
 unidad,		DEC		1
+cuadrado,	DEC		0
+suma, 		DEC		0
+
 
 
 
