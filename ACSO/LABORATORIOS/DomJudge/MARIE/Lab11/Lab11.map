@@ -1,0 +1,43 @@
+ --------------------------
+ Symbol          | Location
+ ----------------+---------
+ a               |   071
+ b               |   072
+ denominador     |   012
+ denominadorEgip |   074
+ div             |   08F
+ div_a           |   0A0
+ div_ans         |   0B7
+ div_b           |   0A1
+ div_body        |   097
+ div_endwhile    |   09E
+ div_q           |   0A2
+ div_while       |   092
+ m1              |   08D
+ m2              |   08C
+ mod             |   0A4
+ mod_a           |   0B5
+ mod_b           |   0B6
+ mult            |   079
+ mult_a          |   08A
+ mult_ans        |   0B8
+ mult_b          |   08B
+ multifinwhile   |   088
+ multiwhile      |   07E
+ numerador       |   011
+ numeradorEgip   |   073
+ op1             |   01A
+ op2             |   01F
+ op3             |   02F
+ op4             |   03F
+ op5             |   050
+ opfinal         |   00B
+ res             |   014
+ resMod1         |   077
+ resMod2         |   076
+ unidad          |   013
+ unidad_2        |   078
+ unidad_3        |   08E
+ unidad_4        |   0A3
+ valor           |   075
+

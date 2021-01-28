@@ -1,0 +1,5 @@
+Laboratorio No. 17
+
+Escriba un programa en lenguaje ensamblador de ARM que lea las tres coordenadas, (x1,y1), (x2,y2) y (x3,y3), de los vertices de un triángulo  y escriba el perímetro y el área del triángulo..
+
+Las coordenada ingresadas corresponden a un triangulo (No se debe verificar si es un triángulo). Usar representación punto fijo 4 decimal

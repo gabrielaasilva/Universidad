@@ -1,0 +1,294 @@
+//Iniciando
+
+		Input 
+		Store		numerador
+		Input		
+		Store		denominador
+		
+		Load 		numerador
+		Subt		unidad
+		
+		Skipcond	400
+		Jump		opfinal
+		Load		denominador
+		
+		Output
+		Halt
+
+opfinal, 	Load		numerador
+		Store		a
+		Load 		denominador
+		Store		b
+
+		Jns		res
+
+		Halt
+
+numerador,	dec	0
+denominador,	dec	0
+unidad,		dec	1
+		
+
+//Número egipcio
+
+res,		dec		0
+
+		Clear
+
+		Load		a
+		Skipcond	400
+		Jump 		op1
+		Halt
+
+op1,		Load		b
+		
+		Skipcond	400
+		Jump		op2
+
+		JumpI		res
+		Halt
+
+op2,		Load		b
+		Store		mod_a
+		Load		a
+		Store		mod_b
+
+		Jns		mod
+		Store		resMod1
+		Skipcond	400
+		Jump 		op3
+
+		Load		b
+		Store		div_a
+		Load		a
+		Store		div_b
+				
+		Jns		div
+
+		Output
+		JumpI		res
+		Halt
+
+op3, 		Load		a
+		Store		mod_a
+		Load		b
+		Store		mod_b
+				
+		Jns		mod
+
+		Store		resMod2
+				
+		Skipcond	400
+		Jump		op4
+
+		Load		a
+		Store		div_a
+		Load		b
+		Store		div_b
+				
+		Jns		div
+
+		Output
+		JumpI		res
+		Halt
+
+op4,		Load		a
+		Subt		b
+				
+		Skipcond	800
+		Jump		op5
+
+		Load		a
+		Store		mod_a
+		Load		b
+		Store		mod_b
+				
+		Jns		mod
+				
+		Store		resMod2
+				
+		Load		resMod2
+		Store		a
+		Load		b
+		Store		b
+
+		Jns		res
+				
+		JumpI		res
+		Halt
+
+op5,		Load		b
+		Store		div_a
+		Load		a
+		Store		div_b
+
+		Jns		div
+				
+		Store		valor
+
+		Load		valor
+		Add		unidad_2
+		Store		valor
+				
+		Load		a
+		Store		mult_a
+		Load		valor
+		Store		mult_b
+				
+		Jns		mult
+
+		Store		numeradorEgip
+				
+		Load		numeradorEgip
+		Subt		b
+		Store		numeradorEgip
+		
+		Load		b
+		Store		mult_a
+		Load		valor
+		Store		mult_b
+				
+		Jns		mult
+
+		Store		denominadorEgip
+			
+		Load		valor
+		Output
+				
+		Load		numeradorEgip
+		Store		a
+		Load		denominadorEgip
+		Store		b
+				
+		Jns		res
+				
+		JumpI		res
+		Halt	
+
+a,			dec	0
+b,			dec	0
+numeradorEgip,		dec	0
+denominadorEgip,	dec	0
+valor,			dec	0
+resMod2,		dec	0
+resMod1,		dec	0
+unidad_2,			dec	1
+
+
+//Multiplicación
+
+mult,		dec		0
+
+		Clear
+
+		Store		m1
+		Store		m2
+	
+		Load		m2
+	
+multiwhile,	Subt		mult_a
+		Skipcond	000
+		Jump		multifinwhile
+
+		Load		m1
+		Add		mult_b
+		Store		m1
+
+		Load		m2
+		Add		unidad_3
+		Store		m2
+		Jump		multiwhile
+
+multifinwhile,	Load		m1
+		JumpI		mult
+
+mult_a,		dec		0
+mult_b,		dec		0
+m2,		dec		0
+m1,		dec		0
+unidad_3,	dec		1
+
+//División
+
+div,	dec	0
+	
+	Clear
+
+	Store	div_q
+	
+div_while,	Load	div_a
+		Subt	div_b
+			
+		Skipcond	000
+		Jump		div_body
+		Jump		div_endwhile
+
+div_body,	Load	div_a
+		Subt	div_b
+		Store	div_a
+
+		Load	div_q
+		Add	unidad_4	
+		Store	div_q
+
+		Jump	div_while
+
+div_endwhile,	Load	div_q
+		JumpI	div
+
+
+div_a,		dec	0
+div_b,		dec	0
+div_q,		dec	0
+unidad_4,	dec	1
+
+//mod
+
+mod,	dec	0
+	
+	Clear
+	
+	Load	mod_a
+	Store	div_a
+	Load	mod_b
+	Store	div_b
+	
+	Jns	div
+
+	Store	div_ans
+	
+	Load	mod_b
+	Store	mult_a
+	Load	div_ans
+	Store	mult_b
+
+	Jns	mult
+
+	Store	mult_ans
+
+	Load	mod_a
+	Subt	mult_ans
+	
+	JumpI	mod
+
+mod_a,		dec	0
+mod_b,		dec	0
+div_ans,	dec	0
+mult_ans,	dec	0
+
+
+
+
+
+
+
+		
+		
+		
+		
+
+
+
+
+		
+

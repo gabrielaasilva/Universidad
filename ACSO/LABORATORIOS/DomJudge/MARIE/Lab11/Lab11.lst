@@ -1,0 +1,351 @@
+     Assembly listing for: Lab11.mas
+                Assembled: Sun Nov 29 17:56:23 COT 2020
+
+         |                                            //Iniciando
+         |                                            
+000 5000 |                  INPUT                      
+001 2011 |                  STORE numerador            
+002 5000 |                  INPUT                      
+003 2012 |                  STORE denominador          
+         |                                            		
+004 1011 |                  LOAD numerador             
+005 4013 |                  SUBT unidad                
+         |                                            		
+006 8400 |                  SKIPCOND 400               
+007 900B |                  JUMP opfinal               
+008 1012 |                  LOAD denominador           
+         |                                            		
+009 6000 |                  OUTPUT                     
+00A 7000 |                  HALT                       
+         |                                            
+00B 1011 |  opfinal         LOAD numerador             
+00C 2071 |                  STORE a                    
+00D 1012 |                  LOAD denominador           
+00E 2072 |                  STORE b                    
+         |                                            
+00F 0014 |                  JNS res                    
+         |                                            
+010 7000 |                  HALT                       
+         |                                            
+011 0000 |  numerador       DEC 0                      
+012 0000 |  denominador     DEC 0                      
+013 0001 |  unidad          DEC 1                      
+         |                                            		
+         |                                            
+         |                                            //Número egipcio
+         |                                            
+014 0000 |  res             DEC 0                      
+         |                                            
+015 A000 |                  CLEAR                      
+         |                                            
+016 1071 |                  LOAD a                     
+017 8400 |                  SKIPCOND 400               
+018 901A |                  JUMP op1                   
+019 7000 |                  HALT                       
+         |                                            
+01A 1072 |  op1             LOAD b                     
+         |                                            		
+01B 8400 |                  SKIPCOND 400               
+01C 901F |                  JUMP op2                   
+         |                                            
+01D C014 |                  JUMPI res                  
+01E 7000 |                  HALT                       
+         |                                            
+01F 1072 |  op2             LOAD b                     
+020 20B5 |                  STORE mod_a                
+021 1071 |                  LOAD a                     
+022 20B6 |                  STORE mod_b                
+         |                                            
+023 00A4 |                  JNS mod                    
+024 2077 |                  STORE resMod1              
+025 8400 |                  SKIPCOND 400               
+026 902F |                  JUMP op3                   
+         |                                            
+027 1072 |                  LOAD b                     
+028 20A0 |                  STORE div_a                
+029 1071 |                  LOAD a                     
+02A 20A1 |                  STORE div_b                
+         |                                            				
+02B 008F |                  JNS div                    
+         |                                            
+02C 6000 |                  OUTPUT                     
+02D C014 |                  JUMPI res                  
+02E 7000 |                  HALT                       
+         |                                            
+02F 1071 |  op3             LOAD a                     
+030 20B5 |                  STORE mod_a                
+031 1072 |                  LOAD b                     
+032 20B6 |                  STORE mod_b                
+         |                                            				
+033 00A4 |                  JNS mod                    
+         |                                            
+034 2076 |                  STORE resMod2              
+         |                                            				
+035 8400 |                  SKIPCOND 400               
+036 903F |                  JUMP op4                   
+         |                                            
+037 1071 |                  LOAD a                     
+038 20A0 |                  STORE div_a                
+039 1072 |                  LOAD b                     
+03A 20A1 |                  STORE div_b                
+         |                                            				
+03B 008F |                  JNS div                    
+         |                                            
+03C 6000 |                  OUTPUT                     
+03D C014 |                  JUMPI res                  
+03E 7000 |                  HALT                       
+         |                                            
+03F 1071 |  op4             LOAD a                     
+040 4072 |                  SUBT b                     
+         |                                            				
+041 8800 |                  SKIPCOND 800               
+042 9050 |                  JUMP op5                   
+         |                                            
+043 1071 |                  LOAD a                     
+044 20B5 |                  STORE mod_a                
+045 1072 |                  LOAD b                     
+046 20B6 |                  STORE mod_b                
+         |                                            				
+047 00A4 |                  JNS mod                    
+         |                                            				
+048 2076 |                  STORE resMod2              
+         |                                            				
+049 1076 |                  LOAD resMod2               
+04A 2071 |                  STORE a                    
+04B 1072 |                  LOAD b                     
+04C 2072 |                  STORE b                    
+         |                                            
+04D 0014 |                  JNS res                    
+         |                                            				
+04E C014 |                  JUMPI res                  
+04F 7000 |                  HALT                       
+         |                                            
+050 1072 |  op5             LOAD b                     
+051 20A0 |                  STORE div_a                
+052 1071 |                  LOAD a                     
+053 20A1 |                  STORE div_b                
+         |                                            
+054 008F |                  JNS div                    
+         |                                            				
+055 2075 |                  STORE valor                
+         |                                            
+056 1075 |                  LOAD valor                 
+057 3078 |                  ADD unidad_2               
+058 2075 |                  STORE valor                
+         |                                            				
+059 1071 |                  LOAD a                     
+05A 208A |                  STORE mult_a               
+05B 1075 |                  LOAD valor                 
+05C 208B |                  STORE mult_b               
+         |                                            				
+05D 0079 |                  JNS mult                   
+         |                                            
+05E 2073 |                  STORE numeradorEgip        
+         |                                            				
+05F 1073 |                  LOAD numeradorEgip         
+060 4072 |                  SUBT b                     
+061 2073 |                  STORE numeradorEgip        
+         |                                            		
+062 1072 |                  LOAD b                     
+063 208A |                  STORE mult_a               
+064 1075 |                  LOAD valor                 
+065 208B |                  STORE mult_b               
+         |                                            				
+066 0079 |                  JNS mult                   
+         |                                            
+067 2074 |                  STORE denominadorEgip      
+         |                                            			
+068 1075 |                  LOAD valor                 
+069 6000 |                  OUTPUT                     
+         |                                            				
+06A 1073 |                  LOAD numeradorEgip         
+06B 2071 |                  STORE a                    
+06C 1074 |                  LOAD denominadorEgip       
+06D 2072 |                  STORE b                    
+         |                                            				
+06E 0014 |                  JNS res                    
+         |                                            				
+06F C014 |                  JUMPI res                  
+070 7000 |                  HALT                       
+         |                                            
+071 0000 |  a               DEC 0                      
+072 0000 |  b               DEC 0                      
+073 0000 |  numeradorEgip   DEC 0                      
+074 0000 |  denominadorEgip DEC 0                      
+075 0000 |  valor           DEC 0                      
+076 0000 |  resMod2         DEC 0                      
+077 0000 |  resMod1         DEC 0                      
+078 0001 |  unidad_2        DEC 1                      
+         |                                            
+         |                                            
+         |                                            //Multiplicación
+         |                                            
+079 0000 |  mult            DEC 0                      
+         |                                            
+07A A000 |                  CLEAR                      
+         |                                            
+07B 208D |                  STORE m1                   
+07C 208C |                  STORE m2                   
+         |                                            	
+07D 108C |                  LOAD m2                    
+         |                                            	
+07E 408A |  multiwhile      SUBT mult_a                
+07F 8000 |                  SKIPCOND 000               
+080 9088 |                  JUMP multifinwhile         
+         |                                            
+081 108D |                  LOAD m1                    
+082 308B |                  ADD mult_b                 
+083 208D |                  STORE m1                   
+         |                                            
+084 108C |                  LOAD m2                    
+085 308E |                  ADD unidad_3               
+086 208C |                  STORE m2                   
+087 907E |                  JUMP multiwhile            
+         |                                            
+088 108D |  multifinwhile   LOAD m1                    
+089 C079 |                  JUMPI mult                 
+         |                                            
+08A 0000 |  mult_a          DEC 0                      
+08B 0000 |  mult_b          DEC 0                      
+08C 0000 |  m2              DEC 0                      
+08D 0000 |  m1              DEC 0                      
+08E 0001 |  unidad_3        DEC 1                      
+         |                                            
+         |                                            //División
+         |                                            
+08F 0000 |  div             DEC 0                      
+         |                                            	
+090 A000 |                  CLEAR                      
+         |                                            
+091 20A2 |                  STORE div_q                
+         |                                            	
+092 10A0 |  div_while       LOAD div_a                 
+093 40A1 |                  SUBT div_b                 
+         |                                            			
+094 8000 |                  SKIPCOND 000               
+095 9097 |                  JUMP div_body              
+096 909E |                  JUMP div_endwhile          
+         |                                            
+097 10A0 |  div_body        LOAD div_a                 
+098 40A1 |                  SUBT div_b                 
+099 20A0 |                  STORE div_a                
+         |                                            
+09A 10A2 |                  LOAD div_q                 
+09B 30A3 |                  ADD unidad_4               
+09C 20A2 |                  STORE div_q                
+         |                                            
+09D 9092 |                  JUMP div_while             
+         |                                            
+09E 10A2 |  div_endwhile    LOAD div_q                 
+09F C08F |                  JUMPI div                  
+         |                                            
+         |                                            
+0A0 0000 |  div_a           DEC 0                      
+0A1 0000 |  div_b           DEC 0                      
+0A2 0000 |  div_q           DEC 0                      
+0A3 0001 |  unidad_4        DEC 1                      
+         |                                            
+         |                                            //mod
+         |                                            
+0A4 0000 |  mod             DEC 0                      
+         |                                            	
+0A5 A000 |                  CLEAR                      
+         |                                            	
+0A6 10B5 |                  LOAD mod_a                 
+0A7 20A0 |                  STORE div_a                
+0A8 10B6 |                  LOAD mod_b                 
+0A9 20A1 |                  STORE div_b                
+         |                                            	
+0AA 008F |                  JNS div                    
+         |                                            
+0AB 20B7 |                  STORE div_ans              
+         |                                            	
+0AC 10B6 |                  LOAD mod_b                 
+0AD 208A |                  STORE mult_a               
+0AE 10B7 |                  LOAD div_ans               
+0AF 208B |                  STORE mult_b               
+         |                                            
+0B0 0079 |                  JNS mult                   
+         |                                            
+0B1 20B8 |                  STORE mult_ans             
+         |                                            
+0B2 10B5 |                  LOAD mod_a                 
+0B3 40B8 |                  SUBT mult_ans              
+         |                                            	
+0B4 C0A4 |                  JUMPI mod                  
+         |                                            
+0B5 0000 |  mod_a           DEC 0                      
+0B6 0000 |  mod_b           DEC 0                      
+0B7 0000 |  div_ans         DEC 0                      
+0B8 0000 |  mult_ans        DEC 0                      
+         |                                            
+         |                                            
+         |                                            
+         |                                            
+         |                                            
+         |                                            
+         |                                            
+         |                                            		
+         |                                            		
+         |                                            		
+         |                                            		
+         |                                            
+         |                                            
+         |                                            
+         |                                            
+         |                                            		
+         |                                            
+
+Assembly successful.
+
+         SYMBOL TABLE
+         -----------------------------------------------------------
+          Symbol          | Defined | References 
+         -----------------+---------+-------------------------------
+          a               |   071   | 00C, 016, 021, 029, 02F, 037, 
+                          |         | 03F, 043, 04A, 052, 059, 06B
+          b               |   072   | 00E, 01A, 01F, 027, 031, 039, 
+                          |         | 040, 045, 04B, 04C, 050, 060, 
+                          |         | 062, 06D
+          denominador     |   012   | 003, 008, 00D
+          denominadorEgip |   074   | 067, 06C
+          div             |   08F   | 02B, 03B, 054, 09F, 0AA
+          div_a           |   0A0   | 028, 038, 051, 092, 097, 099, 
+                          |         | 0A7
+          div_ans         |   0B7   | 0AB, 0AE
+          div_b           |   0A1   | 02A, 03A, 053, 093, 098, 0A9
+          div_body        |   097   | 095
+          div_endwhile    |   09E   | 096
+          div_q           |   0A2   | 091, 09A, 09C, 09E
+          div_while       |   092   | 09D
+          m1              |   08D   | 07B, 081, 083, 088
+          m2              |   08C   | 07C, 07D, 084, 086
+          mod             |   0A4   | 023, 033, 047, 0B4
+          mod_a           |   0B5   | 020, 030, 044, 0A6, 0B2
+          mod_b           |   0B6   | 022, 032, 046, 0A8, 0AC
+          mult            |   079   | 05D, 066, 089, 0B0
+          mult_a          |   08A   | 05A, 063, 07E, 0AD
+          mult_ans        |   0B8   | 0B1, 0B3
+          mult_b          |   08B   | 05C, 065, 082, 0AF
+          multifinwhile   |   088   | 080
+          multiwhile      |   07E   | 087
+          numerador       |   011   | 001, 004, 00B
+          numeradorEgip   |   073   | 05E, 05F, 061, 06A
+          op1             |   01A   | 018
+          op2             |   01F   | 01C
+          op3             |   02F   | 026
+          op4             |   03F   | 036
+          op5             |   050   | 042
+          opfinal         |   00B   | 007
+          res             |   014   | 00F, 01D, 02D, 03D, 04D, 04E, 
+                          |         | 06E, 06F
+          resMod1         |   077   | 024
+          resMod2         |   076   | 034, 048, 049
+          unidad          |   013   | 005
+          unidad_2        |   078   | 057
+          unidad_3        |   08E   | 085
+          unidad_4        |   0A3   | 09B
+          valor           |   075   | 055, 056, 058, 05B, 064, 068
+         -----------------------------------------------------------
+
+

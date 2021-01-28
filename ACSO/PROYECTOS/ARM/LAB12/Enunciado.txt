@@ -1,0 +1,4 @@
+
+Laboratorio No. 12
+
+Escriba un programa en lenguaje ensamblador de ARM que lea los enteros a,b, c y X y evalue el polinomio a * X ^ 2 + b * X + c escribiendo el resultado en pantalla.
