@@ -1,0 +1,26 @@
+enable
+configure terminal
+hostname Switch13
+banner motd # Este es el Switch13 #
+line console 0
+password CiscoC
+login
+exit
+line vty 0 15
+logging synchronous
+password CiscoT
+login
+exit
+no ip domain-lookup
+interface FastEthernet 0/1
+description "Conectado a Oviedo"
+exit
+interface FastEthernet 0/2
+description "Conectado a PC40"
+exit
+interface FastEthernet 0/3
+description "Conectado a Access Point0"
+exit
+enable secret CiscoE
+exit
+copy running-config startup-config
